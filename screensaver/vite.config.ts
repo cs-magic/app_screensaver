@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
@@ -16,6 +17,16 @@ export default defineConfig(async () => ({
     watch: {
       // 3. tell vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],
+    },
+  },
+
+  resolve: {
+    alias: {
+      "@/components/ui": path.resolve(
+        __dirname,
+        "../../packages_frontend/shadcn/dist/ui",
+      ),
+      "@assets": path.resolve(__dirname, "../../assets"),
     },
   },
 }));
