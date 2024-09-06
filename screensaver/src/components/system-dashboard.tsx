@@ -78,16 +78,17 @@ const SystemDashboard = () => {
           unit="%"
         />
         <MetricCard
-          Icon={Activity}
-          title="Network Speed"
-          value={systemInfo.network_speed}
-          unit="Mbps"
-        />
-        <MetricCard
           Icon={Globe}
           title="Disk Usage"
           value={systemInfo.disk_usage}
           unit="%"
+        />
+
+        <MetricCard
+          Icon={Activity}
+          title="Network Speed"
+          value={systemInfo.network_speed}
+          unit="Mbps"
         />
         <MetricCard
           Icon={Zap}
